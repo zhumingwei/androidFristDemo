@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/search_head"
+        android:layout_width="match_parent"
+        android:layout_height="45dip" 
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/search_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/search_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/search_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/search_textView3"
+            android:layout_toRightOf="@id/search_textView1"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_head2"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@id/search_head"
+        android:background="#f7f7f7" >
+
+        <ImageView
+            android:id="@+id/search_imageview1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/login_msg" />
+
+        <TextView
+            android:id="@+id/search_textView4"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/search_imageview1"
+            android:hint="   搜索书名，作者名" 
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+    <!-- 下面的内容 -->
+
+    <RelativeLayout
+        android:id="@+id/search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_head2" >
+        <TextView 
+            android:id="@+id/search_textview_zjss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="  最近搜索"
+            />
+		<ListView 
+		    android:id="@+id/search_listView_zjss"
+		    ></ListView>        
+    </RelativeLayout>
+
+</RelativeLayout>
